@@ -49,13 +49,13 @@
 // refresh slower than this, and in many cases will...just need to set an
 // upper limit to avoid excessive CPU load). An incredibly long comment block
 // for a single constant, thank you for coming to my TED talk!
-#define _PM_MAX_REFRESH_HZ 250 ///< Max matrix refresh rate
+#define _PM_MAX_REFRESH_HZ 1000 ///< Max matrix refresh rate
 
 // Time (in microseconds) to pause following any change in address lines
 // (individually or collectively). Some matrices respond slowly there...
 // must pause on change for matrix to catch up. Defined here (rather than
 // arch.h) because it's not architecture-specific.
-#define _PM_ROW_DELAY 8 ///< Delay time between row address line changes (ms)
+#define _PM_ROW_DELAY 1 ///< Delay time between row address line changes (ms)
 
 // These are the lowest-level functions for issing data to matrices.
 // There are three versions because it depends on how the six RGB data bits

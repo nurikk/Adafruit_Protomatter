@@ -126,7 +126,7 @@ void _PM_timerInit(Protomatter_core *core) {
     ;                        // Wait for it
   GCLK_PCHCTRL_Type pchctrl; // Read-modify-store
   pchctrl.reg = GCLK->PCHCTRL[timer[timerNum].GCLK_ID].reg;
-  pchctrl.bit.GEN = GCLK_PCHCTRL_GEN_GCLK1_Val;
+  pchctrl.bit.GEN = GCLK_PCHCTRL_GEN_GCLK0_Val; // use main clock
   pchctrl.bit.CHEN = 1;
   GCLK->PCHCTRL[timer[timerNum].GCLK_ID].reg = pchctrl.reg;
   while (!GCLK->PCHCTRL[timer[timerNum].GCLK_ID].bit.CHEN)

@@ -39,7 +39,7 @@
 #define _PM_TIMER_DEFAULT TC3
 #define _PM_IRQ_HANDLER TC3_Handler
 #endif
-#define _PM_timerFreq 48000000
+#define _PM_timerFreq F_CPU
 // Partly because IRQs must be declared at compile-time, and partly
 // because we know Arduino's already set up one of the GCLK sources
 // for 48 MHz.
